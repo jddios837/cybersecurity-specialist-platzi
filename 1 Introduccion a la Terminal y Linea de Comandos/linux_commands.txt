@@ -1,0 +1,137 @@
+COMANDS LINUX CYBER SECURITY COURSE
+
+Run Ubuntu Console from Container using docker
+$ docker exec -it cyberubuntu bash
+
+file file_name -> info of the file 
+$ ls -> list all directories and files
+  ls -d -> show only directories
+$ pwd -> check absolute path
+$ rm -r folder -> remove a folder
+
+
+See documents
+$ head doc.txt -n 15 -> see first 15 lines of a document
+$ tail doc.txt -n 15 -> see last 15 lines of a document
+$ less doc.txt -> see all document
+
+Check type of a command
+$ type ls -> ls is aliased to `ls --color=auto'
+
+Create an Alias
+$ alias t="ls -lh" -> create an alias with the letter t, alias are alive during session
+
+Check information of a command
+$ man cd -> 
+$ whatis cd -> ls (1)               - list directory contents
+
+Wildcards
+* any character before/after it
+? one character
+
+List all files in a txt file 
+$ ls descargas > misarchivos.txt -> create a new file each time
+$ ls descargas >> misarchivos.txt ->  create a new file an concat each result in the same file
+
+>	Redirecciona la salida. Por defecto redirecciona el Standard Output.
+>>	Concatena la salida con lo que ya tenga el archivo a donde se está redirigiendo la salida.
+2>	Redirecciona el file descriptor 2 (en este caso Standard Error).
+2>&1	Redirecciona el file descriptor 2 y 1.
+
+Pipe Operator |
+$ ls -lh | less
+$ ls -lh | tee output.txt | less -> list all directories then save these list in the output.txt file, finally
+									show this file
+$ cowsay "Hola amigos" | lolcat | tee vaca.txt
+
+Control Operators
+;  -> Execute the commands one after other
+	$ ls ; date ; cal
+&  -> Execute the commands at the same time
+	$ ls & date & cal
+&& -> Execute the command only if the previous command was execute correctly
+	$ mkdir test && cd test
+|| -> Execute the command event if the previous command was not execute correctly
+
+Permisions for Files
+r read, w write, x execute
+chmod [simboloDelUsuario][operador][permiso] [archivoParaCambiarSusPermisos]
+$ chmod u-x,go=w mitexto.txt 
+$ chmod go+wx [archivo]
+
+rwxr-xr-x
+$ chmod 755 file -> Octal
+
+| owner | group | others | | --- | --- | --- | | u (de user) | g | o |
+-rw-   r--   r-- 1 jddios jddios    0 Sep  9 20:56 file.txt
+
+
+$ whoiam -> how is the user
+$ sudo su -> change to the user root
+$ touch fileName -> create a new file
+
+Link Simbolico
+$ ln -s Documents/Dev Desarrollo -> crea un enlace simbolico llamado Desarrollo 
+									que apunta a la carpeta Documents/Dev
+									
+Show Environment Vars
+$ printenv -> show env vars
+$ echo $NAME -> show var NAME
+$ echo $PATH -> where we install different paths that we need for packages
+
+See file to check Env Vars
+$ ls -la -> check .bashrc file to modify vars, alias, etc
+$ vi .bashrc -> you can check 
+
+Find Commands
+$ which code -> find where is a route for our vscode
+$ find ./ -name file -> find all files called file
+$ find ./ -type f -name *.log | tee log_list.txt -> find the list of file that is tyoe of logs 
+
+Grep Command
+$ grep Towers movies.csv -> Find all math word in a file
+$ grep -i the movies.csv -> -i ignore case sensitive
+$ grep -c the movies.csv -> -c count total mathing 
+$ grep -v towers movies.csv -> -v get all items that not contains towers
+	grep -vi towers movies_afffe2e6-a55c-47f0-8895-9d37c9cd9eb8.csv > sintowers.txt -> save that consult in a txt file
+	
+Count lines, words, bytes etc using regular expression
+$ wc movies.csv -> count lines, words and bytes
+$ wc -l movies.csv -> count number of lines
+$ wc -w movies.csv -> count number of words	
+
+Utilities of Netword
+$ ifconfig -> Get all netword devices information in your PC
+$ ping www.google.com -> check if any page is active or not
+$ curl wwww.google.com > index.html -> get the file of a webpage and save it in a index.html
+$ wget url -> download the file to our system
+$ traceroute www.google.com -> show all nodes used to connect with the service
+$ netstat -i -> show network device
+
+Zip Files
+$ tar -cvf file.tar Folder  -> c compree v verbose f compress file g compress better
+$ tar -cvzf file.tar.gz Folder  -> z compress better
+Unzip File
+$ tar -xzvf file.tar.gz
+
+Using zip
+$ zip -r ToCompressInZip.zip ToCompress 
+$ unzip ToCompressInZip.zip
+
+
+Handleling Proccess
+$ ps -> list proccess, this show PID id for the proccess
+$ kill PID -> kill a process
+$ top -> show all proccess in the background
+
+CTRL + C -> Kill the proccess
+CTRL + Z -> Pause the proccess but it could be runned again
+$ jobs -> check the list of proccess in pause, we use the number to load again the proccess
+$ fg 1 -> run again the procces that was in stantby, 
+
+we can use bg command to run the proccess that was in stantby but keep using the terminal
+
+Text Editors
+$ vim file -> press i to insert, ESC force exit, / to find a word, :w save changes, :q quit
+$ nano
+$ 

@@ -1,0 +1,34 @@
+Linux Hard Disk Commads
+lsblk	Lista los dispositivos de bloques y las particiones en el sistema
+fdisk	Herramienta para administrar particiones de disco
+parted	Herramienta para crear y administrar particiones de disco
+mkfs	Formatea una partición con un sistema de archivos
+mount	Monta un sistema de archivos en una partición o un directorio
+umount	Desmonta un sistema de archivos
+df	Muestra el espacio libre y utilizado en las particiones montadas
+	$ df -Th ver ek tipo y los tamaños mejor organizados
+du	Muestra el tamaño de un archivo o directorio
+resize2fs	Ajusta el tamaño de un sistema de archivos ext2, ext3 o ext4
+lvcreate	Crea un volumen lógico en un grupo de volúmenes LVM
+lvextend	Amplía el tamaño de un volumen lógico
+lvresize	Ajusta el tamaño de un volumen lógico
+lvremove	Elimina un volumen lógico
+vgcreate	Crea un grupo de volúmenes LVM
+vgextend	Amplía un grupo de volúmenes LVM
+vgreduce	Reduce un grupo de volúmenes LVM
+pvcreate	Crea un volumen físico LVM en una partición o dispositivo
+pvextend	Amplía un volumen físico LVM
+pvresize	Ajusta el tamaño de un volumen físico LVM
+pvremove	Elimina un volumen físico LVM 
+
+cheking and Creating SWAP space in UBUNTU
+$ls -lh chequear por archivos swap file
+$free -h check Memory space
+$df -h
+$ sudo fallocate -l 2G /swapfile  crea un archivo llamado swapfile de 2G para ser usado como archivo de intercambio
+$ sudo chmod 600 /swapfile  solo root puede escribir y leer
+$ sudo mkswap /swapfile    hace el archivo de memoria swap
+$ sudo vim /etc/fstap    agregar en el arranque el archivo para que sea cargado al iniciar el sistema
+	/swapfile swap swap defaults 0 0   informacion a agregar en el archivo
+$ sudo swapon /swapfile   monta la memoria swap 
+$ sudo swapoff /swapfile  elimina la memoria swap 

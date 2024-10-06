@@ -1,0 +1,55 @@
+Grupos & Usuarios
+name:password:UID:GID:GECOS:directory:shell
+$ cat /etc/passwd  list all users in the system 
+
+$ cat /etc/shadow list passwd of user emcrypted 
+(si el campo password tiene un *, si el campo password tiene un !, entonces el usuario ha sido bloqueado)
+
+Add User (is needed to be root)
+$ adduser
+
+Change user information
+$ chfn jddios
+
+block user
+$ usermod --lock username
+
+unblock user
+$ usermod --unlock username
+
+remove user
+$ sudo deluser fulano
+
+Check Groups
+$ cat /etc/group
+
+Filter Groups by user
+$ less /etc/group | grep jddios
+
+List groups by user in the current session
+$ groups
+
+list all users belown to a group
+$ getent group sudo
+
+Create a group 
+$ sudo groupadd amigos
+
+Modify name of the group
+$ sudo groupmod -n friends amigos
+
+Change owner of a folder
+$ chgrp friends /shared/
+
+Assign special permissions, all file/folder that we create in the directory is going to be 
+created with the owner group
+$ chmod +s /shared
+
+Add users to a group
+$ usermod -aG group user
+
+Remove user from group
+$gpasswd -d user folder
+
+Remove group
+$groupdel groupName
