@@ -49,7 +49,42 @@ Add users to a group
 $ usermod -aG group user
 
 Remove user from group
-$gpasswd -d user folder
+$gpasswd -d user groupName
 
 Remove group
 $groupdel groupName
+
+
+#add user to sudo group
+$ usermod -aG sudo 
+
+
+Particion y Montado de unidad
+
+list all devices in linux
+$sudo lsblk -l
+
+list all disks with detail
+$ sudo fdisk -ls 
+
+Create patition
+$ sudo fisk /dev/sdb
+luego existen pasos para ejecutar el comando
+n nueva particion y seguir los pasos
+w para ejecutar la creacion de las paticiones
+
+Formater particion con el filesystem
+$sudo mkfs.ext4 /dev/sdb1
+
+Montar la unidad
+$ mkdir scripts
+$ sudo mount /dev/sdb1 /scripts
+
+Desmontar un filesystem
+$ sudo umount /dev/sdb1
+
+Montar filesystem al inicio del arranque
+$ sudo vim /etc/fstab
+
+opciones de configuration
+/dev/sdb1 /scripts	ext4 defaults 0 0
