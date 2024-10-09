@@ -140,3 +140,21 @@ $ vim /etc/fstab
 
 /dev/volumegroup/private /private ext4  defaults        0       0
 /dev/volumegroup/public/public ext4  defaults        0       0
+
+
+
+* Proceso de binding
+mount -o bind /dev/ /mnt/dev
+mount -o bind /dev/pts /mnt/dev/pts
+mount -o bind /proc/ /mnt/proc
+mount -o bind /run/ /mnt/run
+mount -o bind /sys/ /mnt/sys
+
+* Cambiar al root del sistema
+chroot /mnt/ /bin/bash
+
+* Reparar el grub
+grub-mkconfig -o / boot/grub/grub.cfg
+
+* Reinstalar el grub
+grub-install –boot-directory=/boot/ --recheck /dev/sda
