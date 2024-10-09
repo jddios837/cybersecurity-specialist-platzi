@@ -88,3 +88,55 @@ $ sudo vim /etc/fstab
 
 opciones de configuration
 /dev/sdb1 /scripts	ext4 defaults 0 0
+
+
+Creacion de Sistema RAID 1
+se logra redundancia de datos, lo que esta en el disco 1 estara replicado en el disco2
+en caso de que uno de ellos se dañe esta el otro disponible. 
+Disco1 10G y Disco2 10G = Disco 10G
+
+Pasos
+Se necesitan 2 disco del mismo tamaño y conectan a la PC y se formatean
+usando fdisk /dev/disco luego precionar n p y enter (por defecto)
+luego se instala la aplicacion mdadm administrador de dispositivos
+$ apt install mdadm 
+Crear el arreglo RAID
+$ mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sd[cd]
+Check el nuevo RAID1 Creado
+
+Creacion de LVM sobre RAID 1
+instalar el paquete para trabajar con LVM
+$ apt install lvm2
+Creamos primero el PV (Physical Volume) que alojará el LV (Logical Volume):
+$ pvcreate /dev/md0
+Validamos que se haya creado el PV con el siguiente comando:
+$ pvdisplay
+Creamos ahora nuestro grupo de volúmenes (VG):
+$ vgcreate volumegroup /dev/md0
+Validamos que se haya creado el VG con el siguiente comando:
+$ vgdisplay
+Finalmente, crearemos las particiones más pequeñas:
+$ lvcreate --name newname1 --size 1Gb volumegroupname1
+$ lvcreate --name newname2 --size 1Gb volumegroupname2
+$ lvdisplay
+
+Agregando el sistema a fstab
+Una vez creados los RAID y los Volúmenes lógicos, ya podemos pasar a montarlos en nuestro sistema para poderles dar uso.
+Pasos:
+Formateamos a EXT4.
+$ mkfs.ext4 /dev/volumegroup/public
+$ lsblk // confirmar
+
+Agregar a fstab para poderlas usar.
+$ cd / →Vamos al directorio principal
+$ ls -la → Listamos
+$ mkdir public && mkdir private → Creamos las carpetas.
+$ sudo mount /dev/volumegroup/public /public →Montamos la unidad sobre esa carpeta
+$ touch /public/new_file.txt
+$ ls /public
+
+Finalmente, los añadiremos al archivo fstab, escribiendo:
+$ vim /etc/fstab
+
+/dev/volumegroup/private /private ext4  defaults        0       0
+/dev/volumegroup/public/public ext4  defaults        0       0
