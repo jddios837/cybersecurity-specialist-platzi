@@ -1,0 +1,150 @@
+Introduccion a la Ciberseguridad
+	- ¿Que es la ciberseguridad?
+	- Importancia de la ciberseguridad
+	- Beneficios de la ciberseguridad
+	- Retos de la ciberseguridad
+	- Entiende tus riesgos
+
+Campos de acción de la ciberseguridad
+	- Seguridad de la información
+	- Seguridad de aplicaciones
+	- Seguridad en redes
+	- Seguridad en la nube
+	- Seguridad física
+	- Cultura en ciberseguridad
+	
+Ciberamenazas 
+	- Malware
+		Sofware malicioso creado para causar daño, afecta todo tipo de dispositivos y SO.
+		¿Que puede hacer?
+		Permite crackear passwords y acceso a sistemas criticos via shell, replicarse en la red VLAN
+		Afectar la operatividad de sistemas vitales para la empresa.
+		Cryptojacking utiliza procesamiento para mineria de criptos.
+		Secuestro de datos, alterando la integridad de la información.
+		Zombie controlar equipos remotamente para generar ciberataques dirigidos
+		TIPOS de Malware
+		VIRUS, modifica otros programas para difundirse
+		RANSOMWARE, cifra archivos y cobra por rescate.
+		SPYWARE, accede passwords, keystrokes o similar.
+		BOTS, ejecutan ciberataques dirigidos.
+		
+		Check Malwares
+		https://www.virustotal.com/gui/home/upload
+		https://www.hybrid-analysis.com/
+		
+	- Ransomware
+		Utiliza técnicas de cifrado altamente robusto. Lucrativo para ciberdelincuentes y casi siempre es
+		dirigido a empresas.
+		
+		Factores de Riesgo
+		- Direcciones IP públicas sin auditar
+		- Firewall ausente o sin tunning
+		- Carencia de Endpoint Protection (SO sin software antivirus o antimalware)
+		- No existen practicas de Hardening
+		- Falta de Cultura en Seguridad
+		
+		Ciber-Controles
+		- Educar a TODO el equipos.
+		- Asegurar TODOS los activos de información.
+		- Respaldar información de alta importancia.
+		- NUNCA pagar por rescate.
+		
+		Links
+		https://www.nomoreransom.org/en/index.html
+		https://www.pcmag.com/picks/the-best-ransomware-protection
+	
+	- Ingenierida social
+		Interacciones y técnicas utilizadas por ciberdelincuentes para ejecutar delitos.
+		Utiliza manipulación psicológica motivada por gustos o tendencias.
+		
+		Ciclo de vida
+		- Investigation
+			identificación de víctima
+			Captura de información
+			Metodo de ataque
+		- Play
+			Ejecución de ataque
+			Obtención de información
+		- Exit
+			Cierre de interración
+			Eliminación de evidencia
+			
+		Ciber-Controles
+		- Validación de origen, descartar correos o contactos de dudosa procedencia.
+		- 2FA o MFA, fortalecer cuentas con doble o múltiple factor de autenticación.
+		- Cultura en Ciberseguridad, utilizar el sentido común y tener claro que "no todo lo que brilla es oro"
+	- Phishing
+		Técnica de ingeniería social utilizada para el robo de datos personales y financieros.
+		Normalmente, suplanta la identidad digital de empresas o bancos
+		
+		Técnicas de Phishing
+		- Emails Scams, el ciberdelincuente envía miles de falsos correos a usuarios/empresas que 
+			han comprometido sus datos.
+		- Spear Phishing, ciberataque dirigido a empresas o sectores con previo conocimiento
+			organizacional adquirido
+		
+		Ciber-Controles
+		- Security-Educaction, campañas de concienciación en Ciberseguridad
+			(Gophish) con métricas definidas.
+		- 2FA o MFA, Foralecer buzones de correo con doble o múltiple factor de autenticación.
+		- Denuciar enlaces, Utilizar los servicios web diseñados para reportas casos de Phishing 
+			(Microsoft & Google)
+	
+	- Denegacion de servicios (DoS)
+		Ciberataque que afecta la disponibilidad de servicios tecnológicos por inundación de peticiones.
+		Utiliza la generación excesiva de tráfico de red.
+		
+		TIPOS
+		- Basados en volumen, el objetivo es saturar el ancho de banda del sitio atacado (UDP & ICMP).
+			Se mide en bits por segundos (Bps).
+		- De protocolo, consume los recursos del servidor o instancia (SYN, Ping of Death). 
+			Medible en paquetes por segundos (Pps).
+		- De capa de aplicación, generados por request masivos hacia servicios web hasta lograr crashearlos.
+			Se mide en Request por segundo (Rps)
+		
+		Aplicación de DoS
+		- Botnet y DDos, redes de dispositivos zombies que generan ataques Distribuidos hacia objetivos específicos.
+		
+		Ciber-Controles
+		- Seguridad as a Service, adquirir soluciones integrales de seguridad que vinculen reglas y perfiles dedicados a
+			controlar DoS.
+		- Hardening de servicios, aplicar robustecimiento de servicios + Endpoint Protection y evitar configuraciones
+			por defecto.
+		
+			
+	- Man-in-the-middle
+		ciberataque que permite interceptar la comunicación user-application.
+		su objetivo es capturar información sensible y/o de alto riesgo.
+		
+		Tipos de MitM
+		- IP Spoofing, se alteran packet headers para suplantar una dirección IP.
+		- ARP Spoofing, Enlaza una MAC address con la dirección IP del usuario legítimo.
+		- DNS Spoofing, Infiltra un DNS Server, alterando los registros de direcciones web.
+	
+		Ciber-Controles
+		- Alertas en navegadores, No omitir las alertas ofrecidas por los web browsers.
+		- Logging-out obligatorio, Si no utilizas una aplicación, cierra sesión.
+		- VPN, utilizar las bondades de las redes privadas virtuales.
+		- Cifrar comunicaciones, Utilizar TLS 1.3+ con algoritmos de cifrafo robusto.
+		
+Controles en ciberseguridad
+	- Gestión de accesos
+	- Firewall
+	- IPS/IDS (Intrusion Prevention/Detection Systems)
+	- Correlación y gestion de eventos
+	- Copias de seguridad
+	- Cifrado
+	- VPN (Virtual Private Network)
+	- Endpoint protection
+	- BCP (Plan de Continuidad de Negocio
+	- DLP (Data Lost Prevention)
+	- Gestión de incidentes de ciberseguridad
+	- BYOD (Bring Your Own Device
+
+Roles dentro de ciberseguridad
+	- CEO (Chief Executive Officer)
+	- CISO (Chief Information Security Officer)
+	- CSO (Chief Security Officer)
+	- CIO (Chief Information Officer)
+	- Penetration Testers (Red and Blue Team)
+	- Stakeholders
