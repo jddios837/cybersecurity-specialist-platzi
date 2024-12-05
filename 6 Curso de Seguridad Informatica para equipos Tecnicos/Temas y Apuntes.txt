@@ -129,8 +129,66 @@ Ciberamenazas
 		
 Controles en ciberseguridad
 	- Gestión de accesos
+		Se refiere al tratamiento que se brinda a credenciales de acceso, tokens o cualquier otro recursos
+		que permita Authenticación a un sistema.
+		
+		Clasificación
+		- Locales (Offline), permite la administración de accesos en archivo local de tu equipo con master key (KeePass)
+		- Servicio web (Online), permite la sincronia de accesos en diferents dispositivos a través de Internet (1Password)
+		- Basados en token, permite autenticación con componente hardware, generalmente USB
+		
+		Beneficios (Online+Offline)
+		- Uso de contraseña maestra + token-file (MFA)
+		- Promueve el fortalecimiento de claves
+		- Son repositorios de claves debidamente cifrados
+		- Algunos implementas passwordless option (mobile)
+		- Cuentan con generadores de contraseñas
+		- Permiten la gestión de accesos en equipos de trabajo
+	
 	- Firewall
+		Dispositivo o servicio de seguridad que monitorea y controla la entrada + salida de tráfico bajo
+		reglas de seguridad definidas.
+		
+		Aporta a Zero-Trust Security Model
+			- Identities
+			- Devices
+			- Applications
+			- Infraestructure
+			- Data
+			- Network
+		
+		Implementaciones
+			- Appliance en sitio, hardware instalado o configurado de acuerdo a las necesidades de la empresa.
+			- Cloud Security mode, servicios de seguridad adquiridos por demanda, modulares y escalables segun necesidad.
+		
+		Beneficios
+			- Panorama de seguridad, permite visualizar eventos en el tráfico de red para a toma de decisiones
+			- QoS, caliddad en el servicio de la red empresarial
+			- Control permanente, bloquear ciberamenazas emergentes y nuevos modelos de ataques
+			- Canales de red seguros, permite la implementación de VPN o túneles para usos diversos.
+			
+		Links
+			https://www.itsasap.com/blog/how-to-choose-a-firewall
+			
 	- IPS/IDS (Intrusion Prevention/Detection Systems)
+		IDS (Sistema de Detección de Intrusos), es una herramienta de seguridad en la red que analiza el 
+		tráfico interno para detectar actividad maliciosa y alerta al administrador del sistema.
+		
+		IPS (Sistema de Prevención de Intrusos), Es la evolución de los IDS, Este, además de alertar al
+		administrador del sistema cuando detecta actividad maliciosa; puede bloquear, capturar o eliminar
+		paquetes maliciosos.
+			Funcionamiento
+			Estos se encuentran inline para analizar todo el tráfico en la red detrás deñ firewall. Identifican
+			amenazas según los siguientes factores:
+				- Firmas
+				- Anomalias
+				- Politicas
+			Clasificación
+			- NIPS (Network Intrusion Prevention System)
+				Sistema basado en la red.
+			- HIPS (Host Intrusion Prevention System)
+				Sistema basado en el host (PC).
+		
 	- Correlación y gestion de eventos
 	- Copias de seguridad
 	- Cifrado
