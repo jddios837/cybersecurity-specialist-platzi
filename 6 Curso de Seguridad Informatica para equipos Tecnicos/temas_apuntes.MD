@@ -228,8 +228,35 @@ lo que se cifra con una llave pública solo puede ser descifrado con la llave pr
 y viceversa.
 
 **Cifrado en dispositivos personales**
-Si pierdes o te roban tu computador o celular, tus archivos estarán pretegidis si el disco duro 
-estaba cifrado.
+Si pierdes o te roban tu computador o celular, tus archivos estarán pretegidis si el disco duro estaba cifrado.
+
+### VPN (Virtual Private Network)
+Es una tecnologia que permite la conexión de un usuario a la red publica (internet) como si estuviera en una red privada (intranet empresarial) al tiempo que cifra toda la información enviada.
+
+**¿Como funciona?**
+Toda la actividad se cifra y pasa por un intermediario (servidor VPN) el cual reenvia y recibe las peticiones a otros sitios o servicios web.
+
+**¿Por qué debo usar una?**
+- Si la empresa tiene aplicaciones que solo pueden ser accedidas desde su red interna.
+- Cifrar datos enviados en redes no confiables.
+- Ocultar datos enviados en redes no confiables.
+
+### Endpoint Protection
+Es la práctica de proteger todos los dispositivos finales de una red (computadores, celulares, IoT, etc.) mediante la integración de varias herramientas y soluciones. 
+Es la siguiente iteración de las soluciones de antivirus tradicionales que se basaban
+en firmas digitales.
+
+**Características**
+- Clasificación con Machine Learning.
+- Protección avanzada de múltiples dispositivos.
+- Protección de navegación web.
+- Data Lost Protection. DLP
+- Firewall Integrado.
+- Bloqueo de Phishing y Ataques por Correo.
+- Protección de Amenazas Internas.
+- Vista Centralizada de Todos los Dispositivos
+- Cifrado de datos.
+
 
 ## Roles en ciberseguridad
 - **CEO (Chief Executive Officer)**
