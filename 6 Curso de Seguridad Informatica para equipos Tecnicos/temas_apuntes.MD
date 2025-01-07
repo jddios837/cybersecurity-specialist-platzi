@@ -257,6 +257,74 @@ en firmas digitales.
 - Vista Centralizada de Todos los Dispositivos
 - Cifrado de datos.
 
+### BCP (Plan de Continuidad de Negocio)
+"Continuidad de negocio" Es la capacidad de una organización de continuar operando y entregando productos y/o servicios
+según unos niveles predefinidos aceptables luego de un incidente disruptivo.
+
+BCP es un documento que cotiene toda la información necesaria para lograr la "continuidad de negocio".
+Recopila el resultado de un proceso completo que incluye, entre otras cosas, los siguiesntes pasos:
+
+**Identificar:**
+1. Principales funciones de negocio
+2. RTO y RPO por función de negocio
+3. Recursos requeridos por función de negocio
+4. Impacto/costo financiero
+5. Impacto/costo operacional
+6. Impacto/costo legal
+
+**Análisis de Riesgos**
+1. Se busca identificar amenazas, vulnerabilidades y riesgos de la información.
+2. Por cada amenaza identificada se considera su probabilidad y el impacto.
+3. Las amenazas se pueden clasificar en naturales, causadas por el hombre o fallas de infraestructura.
+4. Se pueden identificar controles y costos para cada riesgo.
+
+**Plan de Recuperación**
+Desarrollar una guía que permita al negocio volver a un nivel de opración aceptable.
+Esta guía debe contar con:
+1. Eventos que desencadenan el plan.
+2. Equipo responsable de atención de incidentes.
+3. Plan de recuperación de incidentes.
+4. Lista de contactos.
+
+**Plan de Recuperación de Desastres (DRP)**
+Este incluye:
+1. Inventario de infraestructura vital.
+2. Manual de procedimientos para restablecimiento.
+3. Operaciones manuales para reemplazar sistemas temporalmente.
+
+**Prueba y Mantenimiento**
+Se deben establecer estrategias para:
+1. Probar la efectividad del plan regularmente.
+2. Entrenar al personal para que conozcan el plan.
+3. Actualizar el plan continuamente.
+
+### Data Loss Prevention (DLP)
+Una solución que detecta y previene fugas de información. Detecta y bloquea la extracción de información
+en uso (dispositivos), en movimiento (red) y almacenada (discos).
+
+**¿Por qué es necesario?**
+1. Previene fugas de información.
+2. Protege información sensitiva personal (PII)
+3. Progete propiedad intelectual (IP)
+4. Ayuda al cumplimiento de regulaciones como CCPA, GDPR, HIPAA, entre otros.
+
+### Gestión de Incidentes de Ciberseguridad
+Es un proceso de permite una respuesta efectiva y rápida a ciberataques. Idealmente,
+existe un plan que documenta una serie de procesos y pasos que se deben realizar en 
+cada fase de la respuesta a un incidente. NIST 800-61.
+
+**¿Cómo responder ante un incidente de seguridad?**
+1. Preparación: Estimamos las necesidades y establecemos procedimientos.
+2. Detección y Análisis: Es identificar los signos inusuales que pueden generar dicho incidente.
+3. Identificación: Identificamos que tipo de incidente fue y ocurrió, que tan grave puede ser.
+4. Notificación: Reportamos, notificamos y registramos el incidente.
+5. Clasificación y Priorización: Debemos determinar el tipo de incidente, clasificarlo y así
+saber qué tan grave es y qué tanto nos puede afectar.
+6. Contención, Resolución y Recuperación: Detenemos el ataque y evitar que se propague. Resolvemos
+el incidente. Recuperamos los datos.
+7. Acciones Posteriores Al Cierre: Lecciones aprendidas. Identificamos las causas del incidente,
+por qué pasó y cómo podemos hacer, para qué no vuelva a pasar.
+
 
 ## Roles en ciberseguridad
 - **CEO (Chief Executive Officer)**
